@@ -2,6 +2,17 @@
     box-sizing: border-box;
 }
 
+html {
+    color-scheme: light dark;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+        interpolate-size: allow-keywords;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 1em;
     text-wrap: balance;
@@ -9,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     max-width: 65ch;
-    margin: 0 0 1em; /* !? */
+    margin: 0 0 1em;
     text-wrap: pretty;
 }
 
@@ -28,23 +39,7 @@ a[class] {
     color: inherit;
 }
 
-/* a:not([class]) {
-    text-decoration: underline;
-    text-decoration-skip-ink: auto;
-} */
-
 input, button, textarea, select {
     max-width: 100%;
     font: inherit;
-}
-
-html {
-    color-scheme: light dark;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    html {
-        scroll-behavior: smooth;
-        interpolate-size: allow-keywords;
-    }
 }
